@@ -1,0 +1,39 @@
+
+Module Module1
+
+    Sub Main()
+        Dim str1, str2 As String
+        Dim PC, CR, NC As String
+        Dim count As Integer
+
+        str1 = ("")
+        str2 = ("")
+        PC = ("")
+        CR = ("")
+        NC = ("")
+        count = (0)
+
+        Console.WriteLine("Please enter string: ")
+        str1 = Console.ReadLine
+
+        Console.WriteLine("Please enter character to remove: ")
+        CR = Console.ReadLine
+
+        Console.WriteLine("Please enter character to replace: ")
+        NC = Console.ReadLine
+
+        For count = 1 To Len(str1)
+            PC = Mid(str1, count, 1)
+            If PC = CR Then
+                PC = NC
+            End If
+            str2 = str2 & PC
+        Next
+
+        Console.WriteLine("Your new string is: " & str2)
+        
+        Console.ReadKey()
+
+    End Sub
+
+End Module
